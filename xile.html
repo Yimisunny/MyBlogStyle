@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yimi习乐园</title>
+    <script src="jspage/h_t.js"></script>
+    <link rel="shortcut icon" href="img/t_im.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/com.css" type="text/css">
+    <style>
+        #three{color: #c51ef6;border-bottom: 4px solid #c51ef6;}
+    </style>
+</head>
+<body>
+    <div class="head" id="head"></div>
+    <div class="backimg" ></div>
+    <div class="content" style="width:1100px;height: 300px;position:relative;margin:0 auto;background: rgba(91, 232, 87, 0.4);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#4Cffffff,endColorstr=#4Cffffff);">
+
+        <script>
+            function yyy() {
+                var txt=document.getElementById("text").value;
+                document.body.innerHTML+="<div class='txt' style='width: 100px;height: 100px;position:relative;background: coral;margin: -200px auto;'>"+txt;
+            }
+        </script>
+
+        <div class="center" style="width: 300px;padding-top:100px;margin:0 auto;height: 100px;background: beige;">
+            <div class="input">
+
+                    <textarea  id="text"></textarea>
+                    <input type="button" value="提交" onclick="yyy()">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
