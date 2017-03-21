@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Yimi蚁园主页</title>
-    <link rel="shortcut icon" href="Img/t_im.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="CSS/com.css">
+    <link rel="shortcut icon" href="img/t_im.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/com.css">
     <!--[if !IE]><!-->
-    <script src="JS/jquery-2.0.0.min.js"></script>
-    <script src="JS/jquery.js"></script>
-    <script src="JS/h_t2.js"></script>
+    <script src="js/jquery-2.0.0.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/h_t2.js"></script>
     <!--<![endif]-->
     <!--[if lte IE 8]>
-        <script src="JS/jquery-1.8.3.min.js"></script>
-        <script src="JS/h_t.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/h_t.js"></script>
     <![endif]-->
 
     <!--注意！！！！！！    还没有设置ie8 以上 的ie 浏览器注释-->
     <style>
         #one{color: #c51ef6;border-bottom: 4px solid #c51ef6;}
-        .backimg{width: 100%;z-index:1;position:fixed;background-image: url('Img/bg1.jpg');background-size: cover;-ms-behavior: url(CSS/backsize.htc);behavior: url(CSS/backsize.htc);}
+        .backimg{width: 100%;z-index:1;position:fixed;background-image: url('img/bg1.jpg');background-size: cover;-ms-behavior: url(css/backsize.htc);behavior: url(css/backsize.htc);}
         .content{width: 100%;height:auto;position:relative;z-index:997;}
         .content .conte{width: 100%;position:absolute;}
         .content .cont{width: 100%;/*background: rgba(255, 255, 255, 0.26);*//*filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#E5000000,endColorstr=#E5000000);*/position:relative;}
@@ -29,7 +29,7 @@
         .content .cont .cont-ce .p2{width: 300px;height: 40px;font-size:20px;line-height:40px;margin-left:60px;text-align:center;color:#a61dd4;background-color: rgba(246, 200, 239, 0.71);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99F6C8EF,endColorstr=#99F6C8EF);}
         .content .cont .con-nav{width: 350px;height: 300px;margin-top: 80px;margin-right:60px;/*background-color:rgba(246, 200, 239, 0.71);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99F6C8EF,endColorstr=#99F6C8EF);*/float: right;}
         .content .cont .con-nav li{font-size: 30px;font-weight: 600;font-family: TT-JTC淡斎草書「濃」;color: #9011d4;margin-bottom: 40px;}
-        .content span{width: 50px;height: 50px;position:relative;z-index:997;display:block;cursor:pointer;border-radius: 50%;overflow:hidden;box-shadow:0 -1px 1px #c51ef6;background-image:url('Img/down.png');background-size:cover;color:white;margin: -25px auto auto auto;}
+        .content span{width: 50px;height: 50px;position:relative;z-index:997;display:block;cursor:pointer;border-radius: 50%;overflow:hidden;box-shadow:0 -1px 1px #c51ef6;background-image:url('img/down.png');background-size:cover;color:white;margin: -25px auto auto auto;}
 
 
         .backto{cursor: pointer;width: 50px;height: 70px;background: rgba(222, 218, 222, 0.71);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99eeeeee,endColorstr=#99eeeeee);position: absolute;bottom: 50px;right: 50px;}
@@ -103,7 +103,7 @@
                 img.onload = function () { //图片下载完毕时异步调用callback函数。
                     callback.call(img);//将回调函数的this替换为Image对象
                 };
-                window.setTimeout(dImage("Img/bg3.jpg"),100);
+                window.setTimeout(dImage("img/bg3.jpg"),100);
             }*/
 
 /*
@@ -111,8 +111,8 @@
                  {
                      var bufferImage = new Image();
                      var bufferIm=new Image();
-                     bufferImage.src = "Img/bg1.jpg";
-                     bufferIm.src="Img/bg3.jpg";
+                     bufferImage.src = "img/bg1.jpg";
+                     bufferIm.src="img/bg3.jpg";
                      document.getElementById("image").src = bufferImage.src;
                      document.getElementById("image").src=bufferIm.src;
                      window.setTimeout(onloadIm(),100);
@@ -120,14 +120,14 @@
             function onloadIm2()
             {
                 var bufferImage = new Image();
-                bufferImage.src = "Img/bg3.jpg";
+                bufferImage.src = "img/bg3.jpg";
                 document.getElementById("image").src = bufferImage.src;
                 window.setTimeout(onloadIm2(),100);
             }
             function onloadIm3()
             {
                 var bufferImage = new Image();
-                bufferImage.src = "Img/bg4.jpg";
+                bufferImage.src = "img/bg4.jpg";
                 document.getElementById("image").src = bufferImage.src;
                 window.setTimeout(onloadIm3(),100);
             }*/
@@ -175,7 +175,7 @@
         </div>
     </div>
 
-    <script src="JS/jquery.scrollTo-min.js"></script>
+    <script src="js/jquery.scrollTo-min.js"></script>
 
 </body>
 </html>
