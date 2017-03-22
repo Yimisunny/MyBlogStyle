@@ -17,14 +17,33 @@
 
     <!--注意！！！！！！    还没有设置ie8 以上 的ie 浏览器注释-->
     <style>
+        body{
+            text-align:center;
+            background-attachment:fixed;
+        }
+        .bg-attachment{
+            background:url(img/bg1.jpg) center center no-repeat;
+              background-attachment:fixed;
+        }
+        .bg-attachment .shadow{
+            width:100%;
+            height:600px;
+            overflow:hidden;
+            margin:auto;
+        }
+        .div2{
+            background:url(img/bg4.jpg) center center no-repeat;
+            background-attachment:fixed;
+        }
+
         #one{color: #c51ef6;border-bottom: 4px solid #c51ef6;}
-        .backimg{width: 100%;z-index:1;position:fixed;background-image: url('img/bg1.jpg');background-size: cover;-ms-behavior: url(css/backsize.htc);behavior: url(css/backsize.htc);}
+        .backimg{width: 100%;z-index:1;position:fixed;background-image: url('img/bg3.jpg');background-size: cover;-ms-behavior: url(css/backsize.htc);behavior: url(css/backsize.htc);}
         .content{width: 100%;height:auto;position:relative;z-index:997;}
         .content .conte{width: 100%;position:absolute;}
-        .content .cont{width: 100%;/*background: rgba(255, 255, 255, 0.26);*//*filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#E5000000,endColorstr=#E5000000);*/position:relative;}
-        .content .cn{margin-top: 135px;}
-        .content .cnt{margin-top: 200px;}
-        .content .cont .cont-ce{width: 1100px;background:rgba(0,0,0,0.9);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#E5000000,endColorstr=#E5000000);/*filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#4Cffffff,endColorstr=#4Cffffff);*/position:relative;display:block;margin: 0 auto;}
+        .content .cont{width: 100%;position:relative;}
+        .content .cn{margin-top: 120px;}
+        .content .cnt{background-color:#f6c8ef;margin-top: 120px;}
+        .content .cont .cont-ce{width: 100%;background: #fff;filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#fff,endColorstr=#fff);/*filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#4Cffffff,endColorstr=#4Cffffff);*/position:relative;display:block;margin: 0 auto;}
         .content .cont .cont-ce .p{font-size: 55px;padding-left:60px;padding-top:170px;font-weight: 600;color:#f66ef1;font-family: 'Adobe 宋体 Std L'}
         .content .cont .cont-ce .p2{width: 300px;height: 40px;font-size:20px;line-height:40px;margin-left:60px;text-align:center;color:#a61dd4;background-color: rgba(246, 200, 239, 0.71);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99F6C8EF,endColorstr=#99F6C8EF);}
         .content .cont .con-nav{width: 350px;height: 300px;margin-top: 80px;margin-right:60px;/*background-color:rgba(246, 200, 239, 0.71);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99F6C8EF,endColorstr=#99F6C8EF);*/float: right;}
@@ -37,31 +56,25 @@
     </style>
     <script>
         $(window).scroll( function () {
-            var height=($(window).height());
-            var h_num = $(window).scrollTop();
+
+            var h_num = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
             var tops=document.getElementById("top");
             if(h_num>1){
                 tops.style.boxShadow="1px 2px 1px #fff";
             }else {
                 tops.style.boxShadow="";
             }
-            if(h_num>height-20&&h_num<2*height-20){
-                $(".backimg").css("background-image","url('img/bg3.jpg')");
-            }else if(h_num>(2*height-20)){
-                $(".backimg").css("background-image","url('img/bg4.jpg')")
-            }else {
-                $(".backimg").css("background-image","url('img/bg1.jpg')")
-            }
+
         });
 
         $(function () {
                var bgh=($(window).height());
                $(".backimg").height(bgh);
-               $(".conte").height(bgh);
-               $(".cont,.cont-ce").height(bgh-200);
+               ///$(".conte").height(bgh);
+               $(".cont,.cont-ce").height(bgh-120);
 
-               $(".conte2").css("margin-top",bgh);
-               $(".conte3").css("margin-top",2*bgh).css("background-color","background:rgba(0,0,0,0.9)");
+               $(".conte2").css("margin-top",bgh-bgh/2);
+               $(".conte3").css("margin-top",bgh-90).css("background-color","background:rgba(0,0,0,0.9)");
                $(".content span:first").click(function () {
                    $.scrollTo('#ddd',2000);
                });
@@ -71,30 +84,12 @@
             $(".backto").click(function () {
                 $.scrollTo('#aaa',2000);
             });
-            /*$(".he_img").borderRadius(25);*/
+
            });
 
     </script>
 </head>
 <body>
-    <div class="hidden">
-        <script type="text/javascript">
-
-            var images = new Array();
-            function preload() {
-                for (i = 0; i < preload.arguments.length; i++) {
-                    images[i] = new Image();
-                    images[i].src = preload.arguments[i]
-                }
-            }
-            preload(
-                    "img/bg3.jpg",
-                    "img/bg4.jpg"
-            );
-         
-        </script>
-    </div>
-
     <div class="head" id="head"></div>
     <div class="backimg" id="image"></div>
 
@@ -102,21 +97,14 @@
         <div class="conte" id="aaa">
             <div class="cont cn">
                 <div class="cont-ce">
-                    <div class="con-container" style="float: left">
-                        <div class="p"><p>欢迎来到Yimi蚁园！</p></div>
-                        <div class="p2">Yimi蚁园,探索、发现、学习</div>
-                    </div>
-                    <div class="con-nav">
-                        <ul>
-                            <li>去年今日此门中，</li>
-                            <li>人面桃花相映红。</li>
-                            <li>人面不知何处去，</li>
-                            <li>桃花依旧笑春风。</li>
-                        </ul>
-                    </div>
+                    <div class="p"><p>欢迎来到Yimi蚁园！</p></div>
+                    <div class="p2">Yimi蚁园,探索、发现、学习</div>
                 </div>
             </div>
             <span></span>
+        </div>
+        <div class="bg-attachment">
+            <div class="shadow"></div>
         </div>
         <div class="conte conte2" id="ddd">
             <div class="cont cn">
@@ -127,10 +115,15 @@
             </div>
             <span></span>
         </div>
+        <div class="bg-attachment div2">
+            <div class="shadow"></div>
+        </div>
         <div class="conte conte3" id="rrr">
-            <div class="cont cnt" style="background-color: black">
-                <div class="backto">
-                    <p style="margin-top:15px;text-align: center;">back<br/>top</p>
+            <div class="cont cnt" style="background-color: rgba(0,0,0,0.9)">
+                <div class="cont-ce">
+                    <div class="backto">
+                        <p style="margin-top:15px;text-align: center;">back<br/>top</p>
+                    </div>
                 </div>
             </div>
         </div>
