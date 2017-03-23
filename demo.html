@@ -2,43 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yimi蚂蚁园</title>
-    <script src="jspage/h_t.js"></script>
-    <script src="jspage/jquery-2.0.0.min.js"></script>
+    <title>Yimi蚁园主页</title>
     <link rel="shortcut icon" href="img/t_im.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/com.css" type="text/css">
-    <style>
-        #two{color: #c51ef6;border-bottom: 4px solid #c51ef6;}
+    <link rel="stylesheet" type="text/css" href="css/com.css">
+    <!--[if !IE]><!-->
+    <script src="jspage/h_t2.js"></script>
+    <script src="jspage/jquery-2.0.0.min.js"></script>
+    <script src="jspage/jquery.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+    <script src="jspage/h_t2.js"></script>
+    <script src="jspage/jquery-1.8.3.min.js"></script>
+    <![endif]-->
 
-        .content:after{content:"."; display:block; height:0; visibility:hidden; clear:both;}
-        .content { *zoom:1; }
+    <!--注意！！！！！！    还没有设置ie8 以上 的ie 浏览器注释-->
+    <style>
+        body{
+            text-align:center;
+            background-attachment:fixed;
+        }
+
+        #two{color: #c51ef6;border-bottom: 4px solid #c51ef6;}
+        .backimg{width: 100%;z-index:1;position:fixed;background-image: url('img/bg3.jpg');background-size: cover;-ms-behavior: url(css/backsize.htc);behavior: url(css/backsize.htc);}
+        .content{width: 100%;height:auto;position:relative;z-index:997;}
+        .content .conte{width: 100%;position:absolute;}
+        .content .cont{width: 100%;position:relative;}
+        .content .cn{margin-top: 120px;}
+        .content .cnt{background-color:#f6c8ef;margin-top: 120px;}
+        .content .cont .cont-ce{width: 80%;background: #fff;filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#fff,endColorstr=#fff);/*filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#4Cffffff,endColorstr=#4Cffffff);*/position:relative;display:block;margin: 0 auto;}
+        .content .cont .cont-ce .p{font-size: 55px;padding-left:60px;padding-top:170px;font-weight: 600;color:#f66ef1;font-family: 'Adobe 宋体 Std L'}
+        .content .cont .cont-ce .p2{width: 300px;height: 40px;font-size:20px;line-height:40px;margin-left:60px;text-align:center;color:#a61dd4;background-color: rgba(246, 200, 239, 0.71);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99F6C8EF,endColorstr=#99F6C8EF);}
+        .content .cont .con-nav{width: 350px;height: 300px;margin-top: 80px;margin-right:60px;/*background-color:rgba(246, 200, 239, 0.71);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#99F6C8EF,endColorstr=#99F6C8EF);*/float: right;}
+        .content .cont .con-nav li{font-size: 30px;font-weight: 600;font-family: TT-JTC淡斎草書「濃」;color: #9011d4;margin-bottom: 40px;}
+
     </style>
     <script>
         $(window).scroll( function () {
-            var height = ($(window).height());
-            var h_num = $(window).scrollTop();
-            var tops = document.getElementById("top");
-            if (h_num > 1) {
-                tops.style.boxShadow = "1px 2px 1px #fff";
-            } else {
-                tops.style.boxShadow = "";
+
+            var h_num = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            var tops=document.getElementById("top");
+            if(h_num>1){
+                tops.style.boxShadow="1px 2px 1px #fff";
+            }else {
+                tops.style.boxShadow="";
             }
+
         });
+
+        $(function () {
+            var bgh=($(window).height());
+            $(".backimg").height(bgh);
+            ///$(".conte").height(bgh);
+            $(".cont,.cont-ce").height(bgh);
+
+
+        });
+
     </script>
 </head>
-<body bgcolor="#86ceeb">
-    <div class="head" id="head"></div>
-    <div class="backimg" ></div>
-    <div class="content" style="width:1100px;margin:0 auto;background:rgba(0, 0, 0, 0.84);filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#4Cffffff,endColorstr=#4Cffffff);">
-         <div class="cont-le" style="width: 80%;height:600px;border: 2px solid #c51ef6;float: left;margin-top: 60px;margin-left: 20px;">
+<body>
+<div class="head" id="head"></div>
+<div class="backimg" id="image"></div>
 
-         </div>
-        <div class="cont-ri" style="width: 16%;height:600px;background-color: rgba(246, 200, 239, 0.53);float: right;margin-top: 60px;margin-right: 20px;">
-
+<div class="content">
+    <div class="conte" id="aaa">
+        <div class="cont cn">
+            <div class="cont-ce">
+                <div class="p"><p>欢迎来到Yimi蚁园！</p></div>
+                <div class="p2">Yimi蚁园,探索、发现、学习</div>
+            </div>
         </div>
-        <div style="width: 100%;height: 200px;background:rgba(0, 0, 0, 0.44);float: left">
-
-        </div>
+        <span></span>
     </div>
+    <div class="bg-attachment">
+        <div class="shadow"></div>
+    </div>
+    <div class="conte conte2" id="ddd">
+        <div class="cont cn">
+            <div class="cont-ce">
+                <div class="p"><p>欢迎来到Yimi蚁园！</p></div>
+                <div class="p2">Yimi蚁园,探索、发现、学习</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bg-attachment div2">
+        <div class="shadow"></div>
+    </div>
+
+</div>
+
+<script src="jspage/jquery.scrollTo-min.js"></script>
 </body>
 </html>
