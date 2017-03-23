@@ -25,7 +25,19 @@
     </style>
     <script>
         $(window).scroll(function(){var a=document.documentElement.scrollTop||window.pageYOffset||document.body.scrollTop;var b=document.getElementById("top");if(a>1){b.style.boxShadow="1px 2px 1px #fff"}else{b.style.boxShadow=""}});$(function(){var a=($(window).height());$(".backimg").height(a);$(".cont,.cont-ce").height(a-120);$(".conte2").css("margin-top",a-a/2);$(".conte3").css("margin-top",a-90).css("background-color","background:rgba(0,0,0,0.9)");$(".content span:first").click(function(){$.scrollTo('#ddd',2000)});$(".content span:last").click(function(){$.scrollTo('#rrr',2000)});$(".backto").click(function(){$.scrollTo('#aaa',2000)})});
-
+var str2DOMElement = function(html) {
+            var frame = document.createElement('iframe');
+            frame.style.display = 'none';
+            document.body.appendChild(frame);
+            frame.contentDocument.open();
+            frame.contentDocument.write(html);
+            frame.contentDocument.close();
+            var el = frame.contentDocument.body.firstChild;
+            document.body.removeChild(frame);
+            return el;
+        };
+        var markup = '<div><p>text here</p></div>';
+        var el = str2DOMElement(markup);
     </script>
 </head>
 <body>
