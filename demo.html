@@ -5,7 +5,19 @@
     <title>Yimi蚁园主页</title>
     <link rel="shortcut icon" href="img/t_im.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/com.css">
+    <!--[if !IE]><!-->
+    <script src="jspage/jquery-2.0.0.min.js"></script>
+    <script src="jspage/jquery.js"></script>
+    <script src="jspage/h_t2.js"></script>
 
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+    <script src="jspage/jquery-1.8.3.min.js"></script>
+    <script src="jspage/h_t2.js"></script>
+
+    <![endif]-->
+
+    <!--注意！！！！！！    还没有设置ie8 以上 的ie 浏览器注释-->
     <style>
         body{
             text-align:center;
@@ -66,19 +78,7 @@
 </div>
 
 <script src="jspage/jquery.scrollTo-min.js"></script>
-<!--[if !IE]><!-->
-<script src="jspage/jquery-2.0.0.min.js"></script>
-<script src="jspage/jquery.js"></script>
-<script src="jspage/h_t2.js"></script>
 
-<!--<![endif]-->
-<!--[if lte IE 8]>
-<script src="jspage/jquery-1.8.3.min.js"></script>
-<script src="jspage/h_t2.js"></script>
-
-<![endif]-->
-
-<!--注意！！！！！！    还没有设置ie8 以上 的ie 浏览器注释-->
 <script>
     var img=new Image();
     img.src="img/bg3.jpg";
@@ -99,10 +99,7 @@
         $(".backimg").height(bgh);
         ///$(".conte").height(bgh);
         $(".cont,.cont-ce").height(bgh);
-
-
     });
-
 </script>
 </body>
 </html>
