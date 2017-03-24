@@ -5,27 +5,18 @@
     <title>Yimi蚁园主页</title>
     <link rel="shortcut icon" href="img/t_im.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/com.css">
-    <!--[if !IE]><!-->
-    <script src="jspage/jquery-2.0.0.min.js"></script>
-    <script src="jspage/jquery.js"></script>
-    <script src="jspage/h_t2.js"></script>
 
-    <!--<![endif]-->
-    <!--[if lte IE 8]>
-    <script src="jspage/jquery-1.8.3.min.js"></script>
-    <script src="jspage/h_t2.js"></script>
-
-    <![endif]-->
-
-    <!--注意！！！！！！    还没有设置ie8 以上 的ie 浏览器注释-->
     <style>
         body{
             text-align:center;
             background-attachment:fixed;
+            background-image: url('img/bg3.jpg');background-size: cover;
         }
 
         #two{color: #c51ef6;border-bottom: 4px solid #c51ef6;}
+/*
         .backimg{width: 100%;z-index:1;position:fixed;background-image: url('img/bg3.jpg');background-size: cover;-ms-behavior: url(css/backsize.htc);behavior: url(css/backsize.htc);}
+*/
         .content{width: 100%;height:auto;position:relative;z-index:997;}
         .content .conte{width: 100%;position:absolute;}
         .content .cont{width: 100%;position:relative;}
@@ -38,35 +29,13 @@
         .content .cont .con-nav li{font-size: 30px;font-weight: 600;font-family: TT-JTC淡斎草書「濃」;color: #9011d4;margin-bottom: 40px;}
 
     </style>
-    <script>
-         var img=new Image();
-        img.src="img/bg3.jpg";
-        $(window).scroll( function () {
 
-            var h_num = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-            var tops=document.getElementById("top");
-            if(h_num>1){
-                tops.style.boxShadow="1px 2px 1px #fff";
-            }else {
-                tops.style.boxShadow="";
-            }
-
-        });
-
-        $(function () {
-            var bgh=($(window).height());
-            $(".backimg").height(bgh);
-            ///$(".conte").height(bgh);
-            $(".cont,.cont-ce").height(bgh);
-
-
-        });
-
-    </script>
 </head>
 <body>
 <div class="head" id="head"></div>
+<!--
 <div class="backimg" id="image"></div>
+-->
 
 <div class="content">
     <div class="conte" id="aaa">
@@ -97,5 +66,43 @@
 </div>
 
 <script src="jspage/jquery.scrollTo-min.js"></script>
+<!--[if !IE]><!-->
+<script src="jspage/jquery-2.0.0.min.js"></script>
+<script src="jspage/jquery.js"></script>
+<script src="jspage/h_t2.js"></script>
+
+<!--<![endif]-->
+<!--[if lte IE 8]>
+<script src="jspage/jquery-1.8.3.min.js"></script>
+<script src="jspage/h_t2.js"></script>
+
+<![endif]-->
+
+<!--注意！！！！！！    还没有设置ie8 以上 的ie 浏览器注释-->
+<script>
+    var img=new Image();
+    img.src="img/bg3.jpg";
+    $(window).scroll( function () {
+
+        var h_num = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        var tops=document.getElementById("top");
+        if(h_num>1){
+            tops.style.boxShadow="1px 2px 1px #fff";
+        }else {
+            tops.style.boxShadow="";
+        }
+
+    });
+
+    $(function () {
+        var bgh=($(window).height());
+        $(".backimg").height(bgh);
+        ///$(".conte").height(bgh);
+        $(".cont,.cont-ce").height(bgh);
+
+
+    });
+
+</script>
 </body>
 </html>
