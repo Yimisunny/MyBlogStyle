@@ -22,8 +22,9 @@
         body{
             text-align:center;
             background-attachment:fixed;
-            /*background-image: url('img/bg3.jpg');background-size: cover;*/
-            background-color:red;
+/*
+            background-image: url('img/bg3.jpg');background-size: cover;
+*/
         }
 
         #two{color: #c51ef6;border-bottom: 4px solid #c51ef6;}
@@ -44,7 +45,7 @@
     </style>
 
 </head>
-<body>
+<body id="body">
 <div class="head" id="head"></div>
 <!--
 <div class="backimg" id="image"></div>
@@ -81,10 +82,14 @@
 <script src="jspage/jquery.scrollTo-min.js"></script>
 
 <script>
-    var img=new Image();
-    img.src="img/bg3.jpg";
-    $(window).scroll( function () {
+    var Dim="url('img/bg3.jpg')";
+    localStorage.setItem("Dim",JSON.stringify(Dim));
+    var newImg=JSON.parse(localStorage.getItem("Dim"));
+    var bb=document.getElementById("body");
+    bb.style.backgroundImage=newImg;
 
+
+    $(window).scroll( function () {
         var h_num = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
         var tops=document.getElementById("top");
         if(h_num>1){
